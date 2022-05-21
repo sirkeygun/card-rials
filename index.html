@@ -34,10 +34,16 @@
     </div>
 
     <script>
+        const color = ["red", "black"];
         const SUITS = ["♠", "♥", "♣", "♦"];
         const VALUES = ["A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-        document.getElementById("pl1").innerHTML = VALUES[Math.floor(Math.random() * VALUES.length)] + ' ' + SUITS[Math.floor(Math.random() * SUITS.length)];
-        document.getElementById("pl2").innerHTML = VALUES[Math.floor(Math.random() * VALUES.length)] + ' ' + SUITS[Math.floor(Math.random() * SUITS.length)];
+        const card = VALUES[Math.floor(Math.random() * VALUES.length)] + ' ' + SUITS[Math.floor(Math.random() * SUITS.length)];
+        const card2 = VALUES[Math.floor(Math.random() * VALUES.length)] + ' ' + SUITS[Math.floor(Math.random() * SUITS.length)];
+        const cardColor = color[Math.floor(Math.random() * color.length)];
+        const cardColor2 = color[Math.floor(Math.random() * color.length)];
+        document.getElementById("pl1").innerHTML = `<span style='color: ${cardColor};'> ${card} </span>`;
+        document.getElementById("pl2").innerHTML = `<span style='color: ${cardColor2};'> ${card2} </span>`;
+        console.log(cardColor);
     </script>
 
 </body>
